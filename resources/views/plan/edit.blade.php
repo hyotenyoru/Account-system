@@ -29,7 +29,14 @@
                 </div>
                 <div class="col-12">
                     <label for="inputState" class="form-label">狀態</label> 
-                    <input type="text" name="state" id="inputState" placeholder="請輸入金額" class="form-control" value="{{old('state',$plan->plan_state)}}">
+                    <select name="state"  id="inputState" class="form-select" aria-label="this is off/on button">
+                        <option selected>{{old('state',$plan->plan_state)}}</option>
+                        @if ($plan->plan_state=='啟用')
+                        <option value="停用">停用</option>
+                        @else
+                        <option value="啟用">啟用</option>
+                        @endif
+                      </select>
                 </div>
                 <div class="col-12">
                     <label for="inputLog" class="form-label">備註</label> 

@@ -19,7 +19,6 @@
 <script>
     import json from 'index.json'
     export default {
-  components: { create },
     data: function() {
             return {
                 table:json['table'],
