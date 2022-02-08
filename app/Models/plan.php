@@ -13,4 +13,5 @@ class plan extends Model
         'plan_state',
         'plan_log',
     ];
+    protected $primaryKey = 'plan_id';
 }

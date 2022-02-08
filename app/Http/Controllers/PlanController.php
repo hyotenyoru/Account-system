@@ -87,7 +87,7 @@ class PlanController extends Controller
         $plan->plan_log=$request->log;
         $plan->save();
 
-        return redirect()->route('plan.edit',[$plan->id])->with('success',true);
+        return redirect()->route('plan.edit',[$plan->plan_id])->with('success',true);
     }
 
     /**

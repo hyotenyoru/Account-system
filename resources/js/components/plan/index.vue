@@ -21,8 +21,8 @@
           <tr v-for="(item,start) in list" :key="start">
               <td v-for="(array,end) in listkey" :key="end">{{item[array]}}</td>
             <td>
-              <a v-bind:href="index['url']+item['id']"><span  class="badge bg-primary">檢視</span></a>
-              <a v-bind:href="index['url']+item['id']+'/edit'"><span  class="badge bg-secondary">修改</span></a>
+              <a v-bind:href="index['url']+item['plan_id']"><span  class="badge bg-primary">檢視</span></a>
+              <a v-bind:href="index['url']+item['plan_id']+'/edit'"><span  class="badge bg-secondary">修改</span></a>
             </td>
           </tr> 
         </tbody>

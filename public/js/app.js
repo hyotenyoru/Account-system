@@ -28488,15 +28488,23 @@ var render = function () {
               }),
               _vm._v(" "),
               _c("td", [
-                _c("a", { attrs: { href: _vm.index["url"] + item["id"] } }, [
-                  _c("span", { staticClass: "badge bg-primary" }, [
-                    _vm._v("檢視"),
-                  ]),
-                ]),
+                _c(
+                  "a",
+                  { attrs: { href: _vm.index["url"] + item["plan_id"] } },
+                  [
+                    _c("span", { staticClass: "badge bg-primary" }, [
+                      _vm._v("檢視"),
+                    ]),
+                  ]
+                ),
                 _vm._v(" "),
                 _c(
                   "a",
-                  { attrs: { href: _vm.index["url"] + item["id"] + "/edit" } },
+                  {
+                    attrs: {
+                      href: _vm.index["url"] + item["plan_id"] + "/edit",
+                    },
+                  },
                   [
                     _c("span", { staticClass: "badge bg-secondary" }, [
                       _vm._v("修改"),
@@ -40695,7 +40703,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"index":{"title":"計畫列表","url":"./plan/","list":["#","計畫名稱","備註","功能"],"list_key":["id","plan_name","plan_log"],"key":"plan_name","submit":"新增計畫","search":{"placeholder":"請輸入計畫關鍵字"}},"create":{"title":"新增計畫","url":"/plan/","submit":"新增計畫"},"table":[{"key":"inputName","name":"計畫名稱","name_text":"name","placeholder":"請輸入計畫名稱"},{"key":"inputLog","name":"備註","name_text":"log","placeholder":"請輸入備註(可不輸入)"}]}');
+module.exports = JSON.parse('{"index":{"title":"計畫列表","url":"./plan/","list":["#","計畫名稱","備註","功能"],"list_key":["plan_id","plan_name","plan_log"],"key":"plan_name","submit":"新增計畫","search":{"placeholder":"請輸入計畫關鍵字"}},"create":{"title":"新增計畫","url":"/plan/","submit":"新增計畫"},"table":[{"key":"inputName","name":"計畫名稱","name_text":"name","placeholder":"請輸入計畫名稱"},{"key":"inputLog","name":"備註","name_text":"log","placeholder":"請輸入備註(可不輸入)"}]}');
 
 /***/ })
 
