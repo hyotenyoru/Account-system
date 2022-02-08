@@ -19,18 +19,23 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-//導覽模組
+//導覽
 Vue.component('menu-component', require('./components/menu.vue').default);
 
-//家模組
+//家
 Vue.component('home-component', require('./components/home.vue').default);
 
-//計畫模組
+//計畫
 Vue.component('plan-component', require('./components/plan/index.vue').default);
 
 //計畫創造
 Vue.component('plan-create-component', require('./components/plan/create.vue').default);
 
+//產品
+Vue.component('product-component',require('./components/product/index.vue').default);
+
+//計畫創造
+Vue.component('product-create-component', require('./components/product/create.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

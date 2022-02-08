@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->smallIncrements('product_id');
             $table->string('product_name');
             $table->integer('product_money');
+            $table->string('product_log')->nullable();
             $table->timestamps();
         });
     }

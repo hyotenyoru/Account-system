@@ -13,6 +13,7 @@
         <div class="col-10">
                 <home-component v-if="keyMenu===0"></home-component>
                 <plan-component v-if="keyMenu===2"></plan-component>
+                <product-component v-if="keyMenu===4"></product-component>
         </div>
     </div>
         

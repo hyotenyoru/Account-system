@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\ProductController;
+
 
 
 /*
@@ -25,4 +27,11 @@ Route::get('/plans', function(){
 })->name('plans')->middleware('auth');
 
 Route::resource('/plan',PlanController::class)->middleware('auth');
+
+Route::get('/products',function(){
+    return view('product.index');
+})->name('products')->middleware('auth');
+
+Route::resource('/product',ProductController::class)->middleware('auth');
+
 

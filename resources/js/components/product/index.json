@@ -1,0 +1,39 @@
+{
+    "index":{
+        "title":"計畫列表",
+        "url":"./product/",
+        "list":["#","產品名稱","產品金額","備註","功能"],
+        "list_key":["product_id","product_name","product_money","product_log"],
+        "key":"product_name",
+        "submit":"新增產品",
+        "search":{
+            "placeholder":"請輸入產品關鍵字"
+        }
+        
+    },
+    "create":{
+        "title":"新增產品",
+        "url":"/product/",
+        "submit":"新增產品"
+    },
+    "table":[
+        {
+            "key":"inputName",
+            "name":"產品名稱",
+            "name_text":"name",
+            "placeholder":"請輸入產品名稱"
+        },
+        {
+            "key":"inputMoney",
+            "name":"產品金額",
+            "name_text":"money",
+            "placeholder":"請輸入產品金額"
+        },
+        {
+            "key":"inputLog",
+            "name":"備註",
+            "name_text":"log",
+            "placeholder":"請輸入備註(可不輸入)"
+        }
+    ]
+}
