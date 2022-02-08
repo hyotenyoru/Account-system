@@ -1,0 +1,26 @@
+{
+    "index":{
+        "title":"請輸入標題名稱",
+        "url":"./customer/",
+        "list":["#","log"],
+        "list_key":["#","log"],
+        "key":[],
+        "submit":"",
+        "search":{
+            "placeholder":""
+        }
+        
+    },
+    "create":{
+        "title":"請輸入標題名稱",
+        "url":"請輸入網址",
+        "list":["#","log"],
+        "submit":""
+    },
+    "table":[{
+    "key":"input",
+    "name":"",
+    "name_text":"",
+    "placeholder":"請輸入"
+    }]
+}

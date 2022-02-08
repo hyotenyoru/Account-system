@@ -1,0 +1,33 @@
+{
+    "index":{
+        "title":"計畫列表",
+        "url":"./plan/",
+        "list":["#","計畫名稱","備註","功能"],
+        "list_key":["id","plan_name","plan_log"],
+        "key":"plan_name",
+        "submit":"新增計畫",
+        "search":{
+            "placeholder":"請輸入計畫關鍵字"
+        }
+        
+    },
+    "create":{
+        "title":"新增計畫",
+        "url":"/plan/",
+        "submit":"新增計畫"
+    },
+    "table":[
+        {
+            "key":"inputName",
+            "name":"計畫名稱",
+            "name_text":"name",
+            "placeholder":"請輸入計畫名稱"
+        },
+        {
+            "key":"inputLog",
+            "name":"備註",
+            "name_text":"log",
+            "placeholder":"請輸入備註(可不輸入)"
+        }
+    ]
+}
