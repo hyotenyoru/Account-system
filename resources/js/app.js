@@ -37,6 +37,12 @@ Vue.component('product-component',require('./components/product/index.vue').defa
 //計畫創造
 Vue.component('product-create-component', require('./components/product/create.vue').default);
 
+//客戶
+Vue.component('custom-component',require('./components/custom/index.vue').default);
+
+//客戶創造
+Vue.component('custom-create-component', require('./components/custom/create.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

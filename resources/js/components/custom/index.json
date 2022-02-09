@@ -1,0 +1,52 @@
+{
+    "index":{
+        "title":"客戶列表",
+        "url":"./custom/",
+        "list":["#","客戶名稱","客戶電話","備註","功能"],
+        "list_key":["custom_id","custom_name","custom_tel","custom_log"],
+        "key":"custom_name",
+        "submit":"新增客戶",
+        "search":{
+            "placeholder":"請輸入客戶關鍵字"
+        }
+        
+    },
+    "create":{
+        "title":"新增客戶",
+        "url":"/custom/",
+        "submit":"新增客戶"
+    },
+    "table":[
+        {
+            "key":"inputName",
+            "name":"客戶名稱",
+            "name_text":"name",
+            "placeholder":"請輸入客戶名稱"
+        },
+        {
+            "key":"inputEmail",
+            "name":"客戶信箱",
+            "name_text":"email",
+            "placeholder":"請輸入客戶信箱(可不輸入)"
+        },
+        {
+            "key":"inputAddress",
+            "name":"客戶地址",
+            "name_text":"address",
+            "placeholder":"請輸入客戶地址(可不輸入)"
+        },
+        {
+            "key":"inputTel",
+            "name":"客戶電話",
+            "name_text":"tel",
+            "placeholder":"請輸入客戶電話(可不輸入)"
+        },
+        {
+            "key":"inputLog",
+            "name":"備註",
+            "name_text":"log",
+            "placeholder":"請輸入備註(可不輸入)"
+        }
+        
+    ]
+}

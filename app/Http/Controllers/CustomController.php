@@ -16,6 +16,8 @@ class CustomController extends Controller
     public function index()
     {
         //
+        $custom=custom::all();
+        return $custom->toArray();
     }
 
     /**
@@ -26,6 +28,7 @@ class CustomController extends Controller
     public function create()
     {
         //
+        return view('custom.create');
     }
 
     /**
@@ -37,6 +40,15 @@ class CustomController extends Controller
     public function store(StorecustomRequest $request)
     {
         //
+        $custom=new custom;
+        $custom->custom_name=$request->name;
+        $custom->custom_address=$request->address;
+        $custom->custom_tel=$request->tel;
+        $custom->custom_email=$request->email;
+        $custom->custom_log=$request->log;
+        $custom->save();
+
+        return redirect('/customs');
     }
 
     /**
@@ -48,6 +60,7 @@ class CustomController extends Controller
     public function show(custom $custom)
     {
         //
+        return view('custom.show',compact('custom'));
     }
 
     /**
@@ -59,6 +72,7 @@ class CustomController extends Controller
     public function edit(custom $custom)
     {
         //
+        return view('custom.edit',compact('custom'));
     }
 
     /**
@@ -71,6 +85,14 @@ class CustomController extends Controller
     public function update(UpdatecustomRequest $request, custom $custom)
     {
         //
+        $custom->custom_name=$request->name;
+        $custom->custom_address=$request->address;
+        $custom->custom_tel=$request->tel;
+        $custom->custom_email=$request->email;
+        $custom->custom_log=$request->log;
+        $custom->save();
+
+        return redirect()->route('custom.edit',[$custom->custom_id])->with('success',true);
     }
 
     /**
@@ -82,5 +104,7 @@ class CustomController extends Controller
     public function destroy(custom $custom)
     {
         //
+        $custom->delete();
+        return redirect('/custom');
     }
 }
