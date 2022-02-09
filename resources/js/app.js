@@ -43,6 +43,12 @@ Vue.component('custom-component',require('./components/custom/index.vue').defaul
 //客戶創造
 Vue.component('custom-create-component', require('./components/custom/create.vue').default);
 
+//家人
+Vue.component('family-component',require('./components/family/index.vue').default);
+
+//家人創造
+Vue.component('family-create-component', require('./components/family/create.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
