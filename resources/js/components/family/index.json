@@ -1,7 +1,7 @@
 {
     "index":{
         "title":"家人列表",
-        "url":"./family/",
+        "url":"/family/",
         "list":["#","家人名稱","家人電話","備註","功能"],
         "list_key":["family_id","family_name","family_tel","family_log"],
         "custom_key":"custom_id",

@@ -49,6 +49,11 @@ Vue.component('family-component',require('./components/family/index.vue').defaul
 //家人創造
 Vue.component('family-create-component', require('./components/family/create.vue').default);
 
+//訂單
+Vue.component('order-component',require('./components/order/index.vue').default);
+
+//訂單創造
+Vue.component('order-create-component', require('./components/order/create.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -1,7 +1,7 @@
 {
     "index":{
         "title":"客戶列表",
-        "url":"./custom/",
+        "url":"/custom/",
         "list":["#","客戶名稱","客戶電話","備註","功能"],
         "list_key":["custom_id","custom_name","custom_tel","custom_log"],
         "key":"custom_name",

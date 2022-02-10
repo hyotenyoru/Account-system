@@ -11,5 +11,7 @@
         </nav>
         <family-create-component></family-create-component>
         <family-component></family-component>
+        <order-create-component></order-create-component>
+        <order-component></order-component>
     </div>
 @endsection

@@ -1,7 +1,7 @@
 {
     "index":{
         "title":"計畫列表",
-        "url":"./plan/",
+        "url":"/plan/",
         "list":["#","計畫名稱","備註","功能"],
         "list_key":["plan_id","plan_name","plan_log"],
         "key":"plan_name",

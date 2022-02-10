@@ -41,7 +41,7 @@ class FamilyController extends Controller
     {
         //
         $custom=custom::where('custom_id',$request->custom_id)->first();
-        $family=new family();
+        $family=new family;
         $family->custom_id=$request->custom_id;
         $family->family_name=$request->name;
         $family->family_email=$request->name;
@@ -72,7 +72,7 @@ class FamilyController extends Controller
     public function edit(family $family)
     {
         //
-        return view('custom.edit',compact('family'));
+        return view('family.edit',compact('family'));
     }
 
     /**
@@ -84,8 +84,6 @@ class FamilyController extends Controller
      */
     public function update(UpdatefamilyRequest $request, family $family)
     {
-        //
-        $custom=custom::where('custom_id',$family->custom_id)->first();
 
         $family->family_name=$request->name;
         $family->family_email=$request->name;
@@ -93,7 +91,7 @@ class FamilyController extends Controller
         $family->family_log=$request->log;
         $family->save();
 
-        return view('custom.show',compact('custom'));
+        return redirect()->route('family.edit',[$family->family_id])->with('success',true);
     }
 
     /**

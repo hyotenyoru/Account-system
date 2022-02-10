@@ -1,7 +1,7 @@
 {
     "index":{
         "title":"請輸入標題名稱",
-        "url":"./customer/",
+        "url":"/customer/",
         "list":["#","log"],
         "list_key":["#","log"],
         "key":[],

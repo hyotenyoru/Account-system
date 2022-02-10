@@ -1,7 +1,7 @@
 {
     "index":{
-        "title":"計畫列表",
-        "url":"./product/",
+        "title":"產品列表",
+        "url":"/product/",
         "list":["#","產品名稱","產品金額","備註","功能"],
         "list_key":["product_id","product_name","product_money","product_log"],
         "key":"product_name",
@@ -14,7 +14,7 @@
     "create":{
         "title":"新增產品",
         "url":"/product/",
-        "submit":"新增產品"
+        "submit":"新增"
     },
     "table":[
         {

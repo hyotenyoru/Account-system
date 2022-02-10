@@ -18,6 +18,9 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('custom_id');
             $table->foreign('custom_id')->references('custom_id')
                 ->on('customs')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('plan_id');
+            $table->foreign('plan_id')->references('plan_id')
+                ->on('plans')->onUpdate('cascade')->onDelete('cascade');
             $table->string('order_name');
             $table->string('order_log')->nullable();
             $table->timestamps();

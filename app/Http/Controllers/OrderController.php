@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\order;
+use App\Models\custom;
 use App\Http\Requests\StoreorderRequest;
 use App\Http\Requests\UpdateorderRequest;
 
@@ -16,6 +17,8 @@ class OrderController extends Controller
     public function index()
     {
         //
+        $order=order::all();
+        return $order->toArray();
     }
 
     /**
@@ -37,6 +40,16 @@ class OrderController extends Controller
     public function store(StoreorderRequest $request)
     {
         //
+        $custom=custom::where('custom_id',$request->custom_id)->first();
+        $order=new order;
+        $order->custom_id=$request->custom_id;
+        $order->plan_id=$request->plan_id;
+        $order->order_name=$request->name;
+        $order->order_log=$request->log;
+        $order->save();
+
+        return view('custom.show',compact('custom'));
+        
     }
 
     /**
@@ -59,6 +72,7 @@ class OrderController extends Controller
     public function edit(order $order)
     {
         //
+        return view('order.edit',compact('order'));
     }
 
     /**
@@ -71,6 +85,12 @@ class OrderController extends Controller
     public function update(UpdateorderRequest $request, order $order)
     {
         //
+        $order->plan_id=$request->plan_id;
+        $order->order_name=$request->name;
+        $order->order_log=$request->log;
+        $order->save();
+
+        return redirect()->route('family.edit',[$order->order_id])->with('success',true);
     }
 
     /**
@@ -82,5 +102,9 @@ class OrderController extends Controller
     public function destroy(order $order)
     {
         //
+        $custom=custom::where('custom_id',$family->custom_id)->first();
+
+        $order->delete();
+        return view('custom.show',compact('custom'));
     }
 }
