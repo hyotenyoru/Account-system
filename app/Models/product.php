@@ -14,4 +14,6 @@ class product extends Model
         'product_log',
     ];
     protected $primaryKey='product_id';
+
+    protected $table="products";
 }

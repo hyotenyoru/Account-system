@@ -61,6 +61,7 @@ class OrderController extends Controller
     public function show(order $order)
     {
         //
+        return view('order.show',compact('order'));
     }
 
     /**
@@ -90,7 +91,7 @@ class OrderController extends Controller
         $order->order_log=$request->log;
         $order->save();
 
-        return redirect()->route('family.edit',[$order->order_id])->with('success',true);
+        return redirect()->route('order.edit',[$order->order_id])->with('success',true);
     }
 
     /**
@@ -102,7 +103,7 @@ class OrderController extends Controller
     public function destroy(order $order)
     {
         //
-        $custom=custom::where('custom_id',$family->custom_id)->first();
+        $custom=custom::where('custom_id',$order->custom_id)->first();
 
         $order->delete();
         return view('custom.show',compact('custom'));

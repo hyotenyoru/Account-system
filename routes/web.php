@@ -57,9 +57,6 @@ Route::get('/orders',function(){
 
 Route::resource('/order',OrderController::class)->middleware('auth');
 
-Route::get('/orderlists',function(){
-    return view('orderlist.index');
-})->name('orderlists')->middleware('auth');
 
 Route::resource('/orderlist',OrderListController::class)->middleware('auth');
 

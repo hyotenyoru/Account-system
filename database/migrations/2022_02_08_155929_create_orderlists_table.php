@@ -18,13 +18,15 @@ class CreateOrderlistsTable extends Migration
             $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')->references('order_id')
             ->on('orders')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('order_person_name');
-            $table->string('orderlist_name');
-            $table->integer('orderlist_count');
-            $table->integer('orderlist_total');
+            $table->string('family_name');
+            $table->string('product_name');
+            $table->integer('product_count');
+            $table->integer('product_price');
             $table->integer('orderlist_log')->nullable();
             $table->timestamps();
         });
+
+        
     }
 
     /**

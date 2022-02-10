@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class orderlist extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'family_name',
+        'orderlist_log'
+    ];
+    protected $primaryKey='orderlist_id';
+
+    protected $table='orderlists';
+
 }

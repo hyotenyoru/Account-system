@@ -54,6 +54,12 @@ Vue.component('order-component',require('./components/order/index.vue').default)
 
 //訂單創造
 Vue.component('order-create-component', require('./components/order/create.vue').default);
+
+//訂單項目
+Vue.component('orderlist-component',require('./components/orderlist/index.vue').default);
+
+//訂單項目創造
+Vue.component('orderlist-create-component', require('./components/orderlist/create.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
